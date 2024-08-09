@@ -1,23 +1,15 @@
-import { View, Text, StyleSheet,Pressable } from "react-native";
-import { useRouter } from "expo-router";
-const Home = () => {
-  const router = useRouter();
+import { Text, View } from "react-native";
+
+export default function Index() {
   return (
-    <View style={styles.main}>
-      <Pressable onPress={()=>router.push("/auth")}>
-      <Text>Abhi</Text>
-      </Pressable>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>Edit app/index.tsx to edit this screen.</Text>
     </View>
   );
-};
-
-const styles = StyleSheet.create({
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 80,
-  },
-});
-
-export default Home;
+}
